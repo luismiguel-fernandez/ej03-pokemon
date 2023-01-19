@@ -1,0 +1,20 @@
+<h3>Listado de pokemons</h3>
+
+<div class="list-group">
+
+  <app-pokemon *ngFor="let pok of getPokemons()" [pokemon]="pok"
+                (click)="setPokemonSeleccionado(pok)"
+  >
+
+  </app-pokemon>
+
+</div>
+
+{{getPokemonSeleccionado().Name}}
+
+
+
+
+
+
+
