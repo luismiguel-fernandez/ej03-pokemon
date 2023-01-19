@@ -10,10 +10,11 @@ export class DetallesPokemonComponent {
   pokemon:any = null
 
   constructor(private bd:BdPokemonService) {
-    this.pokemon = this.getPokemonSeleccionado()
+
   }
 
   getPokemonSeleccionado() {
-    return this.bd.getPokemonSeleccionado()
+    this.pokemon = this.bd.getPokemonSeleccionado()
+    return this.pokemon
   }
 }

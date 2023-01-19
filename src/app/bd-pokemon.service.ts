@@ -1373,7 +1373,7 @@ export class BdPokemonService {
     return this.pokemonSeleccionado
   }
   setPokemonSeleccionado(unPok:any) {
-    console.log("servicio"+unPok)
+    console.log("servicio"+unPok.Name)
     this.pokemonSeleccionado = unPok
   }
 }

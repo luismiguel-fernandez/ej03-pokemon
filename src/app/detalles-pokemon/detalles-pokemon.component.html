@@ -1,11 +1,11 @@
 <h3>Detalles</h3>
 
-<div *ngIf="pokemon">
+<div *ngIf="getPokemonSeleccionado()">
   <h4>{{pokemon.Name}}</h4>
   <h5>{{pokemon.Types}}</h5>
 </div>
 
-<div *ngIf="!pokemon">
+<div *ngIf="!getPokemonSeleccionado()">
   <h4>No hay pokemon seleccionado</h4>
   <h5>No hay pokemon seleccionado</h5>
 </div>
