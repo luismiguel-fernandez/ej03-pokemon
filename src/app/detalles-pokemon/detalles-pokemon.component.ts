@@ -8,9 +8,21 @@ import { BdPokemonService } from '../bd-pokemon.service';
 })
 export class DetallesPokemonComponent {
   pokemon:any = null
+  modoEdicion:boolean = false
 
   constructor(private bd:BdPokemonService) {
+    this.modoEdicion = false
+  }
 
+  editarNombre() {
+    this.modoEdicion = true
+  }
+
+  guardarNombre($event:any) {
+    if ($event.key == "Enter") {
+      this.pokemon.Name = $event.target.value
+      this.modoEdicion = false
+    }
   }
 
   getPokemonSeleccionado() {
